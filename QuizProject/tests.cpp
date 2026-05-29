@@ -1,34 +1,35 @@
 #include <iostream>
-#include "Question.h"
+#include <cassert>
 #include "Quiz.h"
+#include "Question.h"
 
-void testQuestion() {
+// простой тест
+void test_question_correct() {
+    Question q("2+2?", { "3", "4", "5" }, 1);
 
-    Question q("2+2?", { "3","4","5" }, 1);
-
-    if (q.isCorrect(1)) {
-        std::cout << "testQuestion: OK\n";
-    }
-    else {
-        std::cout << "testQuestion: FAIL\n";
-    }
+    assert(q.isCorrect(1) == true);
+    assert(q.isCorrect(0) == false);
 }
-void testQuiz() {
 
+void test_quiz_size() {
     Quiz quiz;
-    quiz.addQuestion(Question("2+2?", { "3","4","5" }, 1));
 
-    if (quiz.size() == 1) {
-        std::cout << "testQuiz: OK\n";
-    }
-    else {
-        std::cout << "testQuiz: FAIL\n";
-    }
+    quiz.addQuestion(Question("A?", { "1","2" }, 0));
+    quiz.addQuestion(Question("B?", { "3","4" }, 1));
+
+    assert(quiz.size() == 2);
 }
+
+void run_tests() {
+    std::cout << "Запуск тестов...\n";
+
+    test_question_correct();
+    test_quiz_size();
+
+    std::cout << "Все тесты прошли успешно!\n";
+}
+
 int main() {
-
-    testQuestion();
-    testQuiz();
-
+    run_tests();
     return 0;
 }
