@@ -3,6 +3,9 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
+  <Folder Name="/Элементы решения/">
+    <File Path="README.md" />
+  </Folder>
   <Project Path="QuizProject/QuizProject.vcxproj" Id="6f76a092-d3ae-41a1-bb03-b7abb7bcfed6" />
   <Project Path="QuizTests/QuizTests.vcxproj" Id="b31f42e1-3046-41f5-9f5c-7b53f28dc08a" />
 </Solution>
