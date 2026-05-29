@@ -4,11 +4,10 @@
 
 class QuizEngine {
 private:
-    Quiz quiz;
+    const Quiz& quiz;
     int score;
 
 public:
-    QuizEngine(const Quiz& quiz);
-
+    QuizEngine(const Quiz& quiz);  // ← ОБЯЗАТЕЛЬНО
     void run();
 };

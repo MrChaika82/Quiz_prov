@@ -127,15 +127,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FileLoader.cpp" />
     <ClCompile Include="Question.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Quiz.cpp" />
     <ClCompile Include="QuizEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="FileLoader.h" />
     <ClInclude Include="Question.h" />
     <ClInclude Include="Quiz.h" />
     <ClInclude Include="QuizEngine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="questions.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
