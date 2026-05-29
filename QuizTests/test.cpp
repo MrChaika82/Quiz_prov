@@ -24,3 +24,32 @@ TEST(QuestionTest, TextCheck) {
 
     EXPECT_EQ(q.getText(), "Hello?");
 }
+
+TEST(QuestionTest, OptionsCount)
+{
+    Question q(
+        "Столица Франции?",
+        { "Берлин", "Париж", "Рим", "Лондон" },
+        1
+    );
+
+    EXPECT_EQ(q.getOptions().size(), 4);
+}
+
+TEST(QuestionTest, FirstOptionCheck)
+{
+    Question q(
+        "2 + 2?",
+        { "3", "4", "5" },
+        1
+    );
+
+    EXPECT_EQ(q.getOptions()[0], "3");
+}
+
+TEST(QuizTest, EmptyQuiz)
+{
+    Quiz quiz;
+
+    EXPECT_EQ(quiz.size(), 0);
+}
